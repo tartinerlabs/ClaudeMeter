@@ -66,7 +66,7 @@ public enum UsageWindowType: String, Sendable, Codable {
 
 // MARK: - Usage Window
 
-public struct UsageWindow: Sendable, Codable {
+public struct UsageWindow: Sendable, Codable, Equatable {
     public let utilization: Double  // API returns percentage (0-100), not decimal (0-1)
     public let resetsAt: Date
     public let windowType: UsageWindowType
@@ -146,7 +146,7 @@ public struct UsageWindow: Sendable, Codable {
 
 // MARK: - Usage Snapshot
 
-public struct UsageSnapshot: Sendable, Codable {
+public struct UsageSnapshot: Sendable, Codable, Equatable {
     public let session: UsageWindow
     public let opus: UsageWindow      // Weekly default limit (was "seven_day")
     public let sonnet: UsageWindow?   // Separate Sonnet limit (if available)

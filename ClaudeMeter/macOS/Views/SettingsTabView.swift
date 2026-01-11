@@ -5,12 +5,15 @@
 
 #if os(macOS)
 import SwiftUI
+import ClaudeMeterKit
 
 /// Settings content for the main window tab
 struct SettingsTabView: View {
     @Environment(UsageViewModel.self) private var viewModel
+    @Environment(PairingServer.self) private var pairingServer
     @EnvironmentObject private var updaterController: UpdaterController
     @StateObject private var launchAtLogin = LaunchAtLoginService.shared
+    @State private var showingPairingSheet = false
 
     var body: some View {
         @Bindable var viewModel = viewModel
@@ -154,6 +157,78 @@ struct SettingsTabView: View {
                             .disabled(!credentialsFound)
                         }
                     }
+                }
+
+                // iOS Pairing Section
+                settingsCard(title: "iOS Pairing") {
+                    VStack(spacing: 12) {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Status")
+                                    .font(.body)
+                                Text("Stream usage data to iPhone over local WiFi")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            HStack(spacing: 6) {
+                                Circle()
+                                    .fill(pairingServer.isRunning ? Color.green : Color.orange)
+                                    .frame(width: 8, height: 8)
+                                Text(pairingServer.isRunning ? "Ready" : "Starting...")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+
+                        if !pairingServer.connectedDevices.isEmpty {
+                            Divider()
+
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Connected Devices")
+                                    .font(.body)
+
+                                ForEach(pairingServer.connectedDevices) { device in
+                                    HStack {
+                                        Image(systemName: "iphone")
+                                            .foregroundStyle(.blue)
+                                        Text(device.name)
+                                        Spacer()
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .foregroundStyle(.green)
+                                        Button {
+                                            pairingServer.disconnectDevice(device)
+                                        } label: {
+                                            Image(systemName: "xmark.circle")
+                                                .foregroundStyle(.secondary)
+                                        }
+                                        .buttonStyle(.plain)
+                                    }
+                                    .padding(.vertical, 4)
+                                }
+                            }
+                        }
+
+                        Divider()
+
+                        HStack {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Pair New Device")
+                                    .font(.body)
+                                Text("Generate QR code for iPhone to scan")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            Button("Generate QR Code") {
+                                showingPairingSheet = true
+                            }
+                            .disabled(!pairingServer.isRunning)
+                        }
+                    }
+                }
+                .sheet(isPresented: $showingPairingSheet) {
+                    QRCodePairingView()
                 }
 
                 #if DEBUG
@@ -309,6 +384,7 @@ struct SettingsTabView: View {
 #Preview {
     SettingsTabView()
         .environment(UsageViewModel(credentialProvider: MacOSCredentialService()))
+        .environment(PairingServer())
         .environmentObject(UpdaterController())
         .frame(width: 500, height: 400)
 }

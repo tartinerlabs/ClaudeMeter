@@ -93,7 +93,11 @@
 			membershipExceptions = (
 				iOS/Services/iOSCredentialService.swift,
 				iOS/Services/LiveActivityManager.swift,
+				iOS/Services/PairingClient.swift,
+				iOS/Services/QRCodeScannerService.swift,
 				iOS/Views/DashboardView.swift,
+				iOS/Views/PairingStatusView.swift,
+				iOS/Views/QRCodeScannerView.swift,
 				"iOS/Views/SettingsView+iOS.swift",
 				Models/ClaudeCredentials.swift,
 				Models/TokenUsage.swift,
