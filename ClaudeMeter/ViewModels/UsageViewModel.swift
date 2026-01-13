@@ -130,6 +130,13 @@ final class UsageViewModel {
         let savedInterval = UserDefaults.standard.string(forKey: "refreshInterval")
         self.refreshInterval = RefreshFrequency(rawValue: savedInterval ?? "") ?? .fiveMinutes
     }
+
+    /// Update snapshot from paired Mac (iOS only)
+    func updateFromPairedSnapshot(_ newSnapshot: UsageSnapshot) {
+        snapshot = newSnapshot
+        lastRefreshTime = Date()
+        errorMessage = nil
+    }
     #endif
 
     func refresh(force: Bool = false) async {
