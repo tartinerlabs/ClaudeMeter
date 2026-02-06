@@ -8,5 +8,13 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>ClaudeMeter needs camera access to scan QR codes for pairing with your Mac.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>ClaudeMeter connects to your Mac over local network to sync usage data in real-time.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_claudemeter._tcp</string>
+	</array>
 </dict>
 </plist>
