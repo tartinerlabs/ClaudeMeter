@@ -12,6 +12,7 @@ import SwiftData
 struct ClaudeMeterApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var viewModel: UsageViewModel
+    @State private var pairingServer = PairingServer()
     @StateObject private var updaterController = UpdaterController()
     @AppStorage("selectedMainWindowTab") private var selectedTab: MainWindowTab = .dashboard
     @Environment(\.openWindow) private var openWindow
@@ -40,6 +41,7 @@ struct ClaudeMeterApp: App {
         Window("ClaudeMeter", id: Constants.mainWindowID) {
             MainWindowView()
                 .environment(viewModel)
+                .environment(pairingServer)
                 .environmentObject(updaterController)
                 .task {
                     await viewModel.initializeIfNeeded()
@@ -63,7 +65,18 @@ struct ClaudeMeterApp: App {
         MenuBarExtra {
             MenuBarView()
                 .environment(viewModel)
+                .environment(pairingServer)
                 .environmentObject(updaterController)
+                .task {
+                    // Start pairing server
+                    pairingServer.start()
+                }
+                .onChange(of: viewModel.snapshot) { _, newSnapshot in
+                    // Broadcast to connected iOS devices
+                    if let snapshot = newSnapshot {
+                        pairingServer.broadcast(snapshot: snapshot)
+                    }
+                }
         } label: {
             MenuBarIconView()
                 .environment(viewModel)

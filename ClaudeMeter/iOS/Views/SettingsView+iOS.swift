@@ -5,13 +5,16 @@
 
 #if os(iOS)
 import SwiftUI
+import ClaudeMeterKit
 
 /// iOS Settings view
 struct SettingsView: View {
     @Environment(UsageViewModel.self) private var viewModel
+    @Environment(PairingClient.self) private var pairingClient
     @State private var credentialJSON = ""
     @State private var saveStatus: SaveStatus?
     @State private var showingClearConfirmation = false
+    @State private var showingScanner = false
 
     private enum SaveStatus {
         case success
@@ -22,6 +25,21 @@ struct SettingsView: View {
         @Bindable var viewModel = viewModel
 
         Form {
+            // Mac Pairing Section
+            Section {
+                PairingStatusView()
+
+                Button {
+                    showingScanner = true
+                } label: {
+                    Label("Scan QR Code", systemImage: "qrcode.viewfinder")
+                }
+            } header: {
+                Text("Mac Pairing")
+            } footer: {
+                Text("Pair with ClaudeMeter on your Mac to stream usage data over local WiFi. Open Settings on your Mac and tap \"Generate QR Code\".")
+            }
+
             Section {
                 Picker("Refresh Interval", selection: $viewModel.refreshInterval) {
                     ForEach(RefreshFrequency.allCases) { frequency in
@@ -98,6 +116,9 @@ struct SettingsView: View {
         }
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showingScanner) {
+            QRCodeScannerView()
+        }
         .confirmationDialog("Clear Credentials?", isPresented: $showingClearConfirmation, titleVisibility: .visible) {
             Button("Clear", role: .destructive) {
                 clearCredentials()
@@ -145,6 +166,7 @@ struct SettingsView: View {
             .environment(UsageViewModel(
                 credentialProvider: iOSCredentialService()
             ))
+            .environment(PairingClient())
     }
 }
 #endif

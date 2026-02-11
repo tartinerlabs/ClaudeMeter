@@ -188,6 +188,13 @@ final class UsageViewModel {
         // Load cached data on init
         loadCachedSnapshot()
     }
+
+    /// Update snapshot from paired Mac (iOS only)
+    func updateFromPairedSnapshot(_ newSnapshot: UsageSnapshot) {
+        snapshot = newSnapshot
+        lastRefreshTime = Date()
+        errorMessage = nil
+    }
     #endif
 
     // MARK: - Cache Management
