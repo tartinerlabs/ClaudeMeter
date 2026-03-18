@@ -1,8 +1,9 @@
 //
 //  MainTabView.swift
-//  ClaudeMeter-iOS
+//  ClaudeMeter
 //
 
+#if os(iOS)
 import SwiftUI
 
 /// Main tab container for iOS app
@@ -42,3 +43,4 @@ struct MainTabView: View {
             credentialProvider: iOSCredentialService()
         ))
 }
+#endif

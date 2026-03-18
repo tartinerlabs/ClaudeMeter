@@ -7,8 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Multi-platform SwiftUI app (macOS + iOS) built with Xcode (no npm/yarn/package managers).
 
 **Available schemes:**
-- `ClaudeMeter` - macOS menu bar app
-- `ClaudeMeter-iOS` - iOS app with Dashboard
+- `ClaudeMeter` - Multiplatform app (macOS menu bar + iOS)
 - `ClaudeMeterWidgetsExtension` - iOS Widgets and Live Activities
 - `ClaudeMeterKit` - Shared Swift Package (data models)
 
@@ -17,12 +16,12 @@ Multi-platform SwiftUI app (macOS + iOS) built with Xcode (no npm/yarn/package m
 xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter -configuration Debug build
 
 # Build iOS app (iPhone 17 Pro)
-xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter-iOS -configuration Debug \
+xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter -configuration Debug \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
 
-# Build iPadOS app (iPad Air 11-inch M3)
-xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter-iOS -configuration Debug \
-  -destination 'platform=iOS Simulator,name=iPad Air 11-inch (M3)' build
+# Build iPadOS app (iPad Air 11-inch M4)
+xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter -configuration Debug \
+  -destination 'platform=iOS Simulator,name=iPad Air 11-inch (M4)' build
 
 # Build iOS widgets
 xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeterWidgetsExtension -configuration Debug \
@@ -35,12 +34,12 @@ xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter -configuration Rel
 xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter test
 
 # Run tests (iOS - iPhone 17 Pro)
-xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter-iOS \
+xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' test
 
-# Run tests (iPadOS - iPad Air 11-inch M3)
-xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter-iOS \
-  -destination 'platform=iOS Simulator,name=iPad Air 11-inch (M3)' test
+# Run tests (iPadOS - iPad Air 11-inch M4)
+xcodebuild -project ClaudeMeter.xcodeproj -scheme ClaudeMeter \
+  -destination 'platform=iOS Simulator,name=iPad Air 11-inch (M4)' test
 ```
 
 Or open `ClaudeMeter.xcodeproj` in Xcode: ⌘B to build, ⌘R to run.
@@ -94,9 +93,9 @@ MacOSCredentialService (actor)  +  ClaudeAPIService (actor)  +  TokenUsageServic
 ClaudeMeterKit (Swift Package) - UsageSnapshot, UsageWindow, UsageStatus, etc.
 ```
 
-**iOS:**
+**iOS (same ClaudeMeterApp target):**
 ```
-ClaudeMeter_iOSApp (@main)
+ClaudeMeterApp (@main) — #if os(iOS) branch
     ↓
 MainTabView (TabView: Dashboard, Settings, About)
     ↓ (.environment injection)
