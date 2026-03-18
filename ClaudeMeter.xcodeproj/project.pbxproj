@@ -10,34 +10,12 @@
 		D835E7BC2F06B812001A996A /* Sparkle in Frameworks */ = {isa = PBXBuildFile; platformFilters = (macos, ); productRef = D8EFFFC12F05CD75006A2183 /* Sparkle */; };
 		D835E8532F06D377001A996A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D835E8522F06D377001A996A /* WidgetKit.framework */; };
 		D835E8552F06D377001A996A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D835E8542F06D377001A996A /* SwiftUI.framework */; };
-		D835E8662F06D378001A996A /* ClaudeMeterWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D835E8502F06D377001A996A /* ClaudeMeterWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D85BC0672F6AF70C00F010B6 /* ClaudeMeterWidgetsExtension.appex in CopyFiles */ = {isa = PBXBuildFile; fileRef = D835E8502F06D377001A996A /* ClaudeMeterWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D8AB30E12F0AB1E800A4BD39 /* ClaudeMeterKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8AB30E02F0AB1E800A4BD39 /* ClaudeMeterKit */; };
-		D8AB30E32F0AB29700A4BD39 /* ClaudeMeterKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8AB30E22F0AB29700A4BD39 /* ClaudeMeterKit */; };
 		D8AB30E52F0AB2B800A4BD39 /* ClaudeMeterKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8AB30E42F0AB2B800A4BD39 /* ClaudeMeterKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D835E81B2F06B9B0001A996A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D8EFFF6A2F05796A006A2183 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D835E8092F06B9AE001A996A;
-			remoteInfo = "ClaudeMeter-iOS";
-		};
-		D835E8252F06B9B0001A996A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D8EFFF6A2F05796A006A2183 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D835E8092F06B9AE001A996A;
-			remoteInfo = "ClaudeMeter-iOS";
-		};
-		D835E8642F06D378001A996A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D8EFFF6A2F05796A006A2183 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D835E84F2F06D377001A996A;
-			remoteInfo = ClaudeMeterWidgetsExtension;
-		};
 		D8EFFF842F05796C006A2183 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D8EFFF6A2F05796A006A2183 /* Project object */;
@@ -55,23 +33,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D835E86B2F06D378001A996A /* Embed Foundation Extensions */ = {
+		D85BC0652F6AF6E100F010B6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D835E8662F06D378001A996A /* ClaudeMeterWidgetsExtension.appex in Embed Foundation Extensions */,
+				D85BC0672F6AF70C00F010B6 /* ClaudeMeterWidgetsExtension.appex in CopyFiles */,
 			);
-			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D835E80A2F06B9AE001A996A /* ClaudeMeter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClaudeMeter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D835E81A2F06B9B0001A996A /* ClaudeMeter-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ClaudeMeter-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D835E8242F06B9B0001A996A /* ClaudeMeter-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ClaudeMeter-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835E8502F06D377001A996A /* ClaudeMeterWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClaudeMeterWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835E8522F06D377001A996A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D835E8542F06D377001A996A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -81,48 +55,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D835E82C2F06B9B0001A996A /* Exceptions for "ClaudeMeter-iOS" folder in "ClaudeMeter-iOS" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = D835E8092F06B9AE001A996A /* ClaudeMeter-iOS */;
-		};
-		D835E8382F06C197001A996A /* Exceptions for "ClaudeMeter" folder in "ClaudeMeter-iOS" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DependencyContainer.swift,
-				iOS/Services/iOSCredentialService.swift,
-				iOS/Services/LiveActivityManager.swift,
-				iOS/Views/DashboardView.swift,
-				"iOS/Views/SettingsView+iOS.swift",
-				Models/ClaudeCredentials.swift,
-				Models/TokenUsage.swift,
-				Services/ClaudeAPIService.swift,
-				Services/TokenUsageService.swift,
-				Services/UpdaterController.swift,
-				Services/UsageHistoryService.swift,
-				Shared/Models/LiveActivityAttributes.swift,
-				Shared/Protocols/APIServiceProtocol.swift,
-				Shared/Protocols/NotificationServiceProtocol.swift,
-				Shared/Protocols/TokenUsageServiceProtocol.swift,
-				Shared/Protocols/WidgetDataServiceProtocol.swift,
-				Shared/Services/CredentialProvider.swift,
-				Shared/Services/KeychainHelper.swift,
-				Shared/Services/NetworkMonitor.swift,
-				Shared/Services/TokenRefreshService.swift,
-				Shared/Services/WidgetDataManager.swift,
-				Shared/Utilities/Logger.swift,
-				Shared/ViewModels/RefreshScheduler.swift,
-				Shared/Views/UsageCardView.swift,
-				Utilities/Constants.swift,
-				ViewModels/UsageViewModel.swift,
-				Views/MenuBarView.swift,
-				Views/SettingsView.swift,
-				Views/UsageRowView.swift,
-			);
-			target = D835E8092F06B9AE001A996A /* ClaudeMeter-iOS */;
-		};
 		D835E86A2F06D378001A996A /* Exceptions for "ClaudeMeterWidgets" folder in "ClaudeMeterWidgetsExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -140,24 +72,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D835E80B2F06B9AE001A996A /* ClaudeMeter-iOS */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				D835E82C2F06B9B0001A996A /* Exceptions for "ClaudeMeter-iOS" folder in "ClaudeMeter-iOS" target */,
-			);
-			path = "ClaudeMeter-iOS";
-			sourceTree = "<group>";
-		};
-		D835E81D2F06B9B0001A996A /* ClaudeMeter-iOSTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "ClaudeMeter-iOSTests";
-			sourceTree = "<group>";
-		};
-		D835E8272F06B9B0001A996A /* ClaudeMeter-iOSUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "ClaudeMeter-iOSUITests";
-			sourceTree = "<group>";
-		};
 		D835E8562F06D377001A996A /* ClaudeMeterWidgets */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -170,7 +84,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				D8EFFF952F05796C006A2183 /* Exceptions for "ClaudeMeter" folder in "ClaudeMeter" target */,
-				D835E8382F06C197001A996A /* Exceptions for "ClaudeMeter" folder in "ClaudeMeter-iOS" target */,
 			);
 			path = ClaudeMeter;
 			sourceTree = "<group>";
@@ -188,28 +101,6 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D835E8072F06B9AE001A996A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D8AB30E32F0AB29700A4BD39 /* ClaudeMeterKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D835E8172F06B9B0001A996A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D835E8212F06B9B0001A996A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D835E84D2F06D377001A996A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,9 +152,6 @@
 				D8EFFF742F05796A006A2183 /* ClaudeMeter */,
 				D8EFFF862F05796C006A2183 /* ClaudeMeterTests */,
 				D8EFFF902F05796C006A2183 /* ClaudeMeterUITests */,
-				D835E80B2F06B9AE001A996A /* ClaudeMeter-iOS */,
-				D835E81D2F06B9B0001A996A /* ClaudeMeter-iOSTests */,
-				D835E8272F06B9B0001A996A /* ClaudeMeter-iOSUITests */,
 				D835E8562F06D377001A996A /* ClaudeMeterWidgets */,
 				D835E8512F06D377001A996A /* Frameworks */,
 				D8EFFF732F05796A006A2183 /* Products */,
@@ -276,9 +164,6 @@
 				D8EFFF722F05796A006A2183 /* ClaudeMeter.app */,
 				D8EFFF832F05796C006A2183 /* ClaudeMeterTests.xctest */,
 				D8EFFF8D2F05796C006A2183 /* ClaudeMeterUITests.xctest */,
-				D835E80A2F06B9AE001A996A /* ClaudeMeter-iOS.app */,
-				D835E81A2F06B9B0001A996A /* ClaudeMeter-iOSTests.xctest */,
-				D835E8242F06B9B0001A996A /* ClaudeMeter-iOSUITests.xctest */,
 				D835E8502F06D377001A996A /* ClaudeMeterWidgetsExtension.appex */,
 			);
 			name = Products;
@@ -287,77 +172,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D835E8092F06B9AE001A996A /* ClaudeMeter-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D835E82D2F06B9B0001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeter-iOS" */;
-			buildPhases = (
-				D835E8062F06B9AE001A996A /* Sources */,
-				D835E8072F06B9AE001A996A /* Frameworks */,
-				D835E8082F06B9AE001A996A /* Resources */,
-				D835E86B2F06D378001A996A /* Embed Foundation Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D835E8652F06D378001A996A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D835E80B2F06B9AE001A996A /* ClaudeMeter-iOS */,
-			);
-			name = "ClaudeMeter-iOS";
-			packageProductDependencies = (
-				D8AB30E22F0AB29700A4BD39 /* ClaudeMeterKit */,
-			);
-			productName = "ClaudeMeter-iOS";
-			productReference = D835E80A2F06B9AE001A996A /* ClaudeMeter-iOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		D835E8192F06B9B0001A996A /* ClaudeMeter-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D835E8302F06B9B0001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeter-iOSTests" */;
-			buildPhases = (
-				D835E8162F06B9B0001A996A /* Sources */,
-				D835E8172F06B9B0001A996A /* Frameworks */,
-				D835E8182F06B9B0001A996A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D835E81C2F06B9B0001A996A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D835E81D2F06B9B0001A996A /* ClaudeMeter-iOSTests */,
-			);
-			name = "ClaudeMeter-iOSTests";
-			packageProductDependencies = (
-			);
-			productName = "ClaudeMeter-iOSTests";
-			productReference = D835E81A2F06B9B0001A996A /* ClaudeMeter-iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D835E8232F06B9B0001A996A /* ClaudeMeter-iOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D835E8332F06B9B0001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeter-iOSUITests" */;
-			buildPhases = (
-				D835E8202F06B9B0001A996A /* Sources */,
-				D835E8212F06B9B0001A996A /* Frameworks */,
-				D835E8222F06B9B0001A996A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D835E8262F06B9B0001A996A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D835E8272F06B9B0001A996A /* ClaudeMeter-iOSUITests */,
-			);
-			name = "ClaudeMeter-iOSUITests";
-			packageProductDependencies = (
-			);
-			productName = "ClaudeMeter-iOSUITests";
-			productReference = D835E8242F06B9B0001A996A /* ClaudeMeter-iOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		D835E84F2F06D377001A996A /* ClaudeMeterWidgetsExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D835E8672F06D378001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeterWidgetsExtension" */;
@@ -388,6 +202,7 @@
 				D8EFFF6E2F05796A006A2183 /* Sources */,
 				D8EFFF6F2F05796A006A2183 /* Frameworks */,
 				D8EFFF702F05796A006A2183 /* Resources */,
+				D85BC0652F6AF6E100F010B6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -459,19 +274,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
-				LastUpgradeCheck = 2620;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
-					D835E8092F06B9AE001A996A = {
-						CreatedOnToolsVersion = 26.2;
-					};
-					D835E8192F06B9B0001A996A = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = D835E8092F06B9AE001A996A;
-					};
-					D835E8232F06B9B0001A996A = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = D835E8092F06B9AE001A996A;
-					};
 					D835E84F2F06D377001A996A = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -509,36 +313,12 @@
 				D8EFFF712F05796A006A2183 /* ClaudeMeter */,
 				D8EFFF822F05796C006A2183 /* ClaudeMeterTests */,
 				D8EFFF8C2F05796C006A2183 /* ClaudeMeterUITests */,
-				D835E8092F06B9AE001A996A /* ClaudeMeter-iOS */,
-				D835E8192F06B9B0001A996A /* ClaudeMeter-iOSTests */,
-				D835E8232F06B9B0001A996A /* ClaudeMeter-iOSUITests */,
 				D835E84F2F06D377001A996A /* ClaudeMeterWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D835E8082F06B9AE001A996A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D835E8182F06B9B0001A996A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D835E8222F06B9B0001A996A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D835E84E2F06D377001A996A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -570,27 +350,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D835E8062F06B9AE001A996A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D835E8162F06B9B0001A996A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D835E8202F06B9B0001A996A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D835E84C2F06D377001A996A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -622,21 +381,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D835E81C2F06B9B0001A996A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D835E8092F06B9AE001A996A /* ClaudeMeter-iOS */;
-			targetProxy = D835E81B2F06B9B0001A996A /* PBXContainerItemProxy */;
-		};
-		D835E8262F06B9B0001A996A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D835E8092F06B9AE001A996A /* ClaudeMeter-iOS */;
-			targetProxy = D835E8252F06B9B0001A996A /* PBXContainerItemProxy */;
-		};
-		D835E8652F06D378001A996A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D835E84F2F06D377001A996A /* ClaudeMeterWidgetsExtension */;
-			targetProxy = D835E8642F06D378001A996A /* PBXContainerItemProxy */;
-		};
 		D8EFFF852F05796C006A2183 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D8EFFF712F05796A006A2183 /* ClaudeMeter */;
@@ -650,187 +394,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D835E82E2F06B9B0001A996A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "ClaudeMeter-iOS/ClaudeMeter_iOS.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 96NH8UVPYB;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ClaudeMeter-iOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Claude Meter";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 0.8.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D835E82F2F06B9B0001A996A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "ClaudeMeter-iOS/ClaudeMeter_iOS.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 96NH8UVPYB;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ClaudeMeter-iOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Claude Meter";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 0.8.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D835E8312F06B9B0001A996A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 96NH8UVPYB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 0.8.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tartinerlabs.ClaudeMeter-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClaudeMeter-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClaudeMeter-iOS";
-			};
-			name = Debug;
-		};
-		D835E8322F06B9B0001A996A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 96NH8UVPYB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 0.8.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tartinerlabs.ClaudeMeter-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClaudeMeter-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClaudeMeter-iOS";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D835E8342F06B9B0001A996A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 96NH8UVPYB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 0.8.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tartinerlabs.ClaudeMeter-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "ClaudeMeter-iOS";
-			};
-			name = Debug;
-		};
-		D835E8352F06B9B0001A996A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = 96NH8UVPYB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 0.8.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tartinerlabs.ClaudeMeter-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "ClaudeMeter-iOS";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		D835E8682F06D378001A996A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -838,7 +401,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClaudeMeterWidgets/Info.plist;
@@ -850,7 +413,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeter.ClaudeMeterWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -874,7 +437,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClaudeMeterWidgets/Info.plist;
@@ -886,7 +449,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeter.ClaudeMeterWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -909,16 +472,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_APP_SANDBOX = NO;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 35;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 96NH8UVPYB;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClaudeMeter/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Claude Meter";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -933,20 +499,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -955,16 +523,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_APP_SANDBOX = NO;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 35;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 96NH8UVPYB;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClaudeMeter/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Claude Meter";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -979,20 +550,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1030,6 +603,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1053,6 +627,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1092,6 +667,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1108,6 +684,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -1117,12 +694,13 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 35;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1142,12 +720,13 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 35;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1166,12 +745,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 35;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1190,12 +770,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 35;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 96NH8UVPYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tartinerlabs.ClaudeMeterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1213,33 +794,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D835E82D2F06B9B0001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeter-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D835E82E2F06B9B0001A996A /* Debug */,
-				D835E82F2F06B9B0001A996A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D835E8302F06B9B0001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeter-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D835E8312F06B9B0001A996A /* Debug */,
-				D835E8322F06B9B0001A996A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D835E8332F06B9B0001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeter-iOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D835E8342F06B9B0001A996A /* Debug */,
-				D835E8352F06B9B0001A996A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D835E8672F06D378001A996A /* Build configuration list for PBXNativeTarget "ClaudeMeterWidgetsExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1308,11 +862,6 @@
 /* Begin XCSwiftPackageProductDependency section */
 		D8AB30E02F0AB1E800A4BD39 /* ClaudeMeterKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ClaudeMeterKit;
-		};
-		D8AB30E22F0AB29700A4BD39 /* ClaudeMeterKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D8AB30DF2F0AB1E800A4BD39 /* XCLocalSwiftPackageReference "ClaudeMeterKit" */;
 			productName = ClaudeMeterKit;
 		};
 		D8AB30E42F0AB2B800A4BD39 /* ClaudeMeterKit */ = {

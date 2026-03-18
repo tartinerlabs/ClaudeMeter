@@ -6,19 +6,24 @@
 //
 
 import SwiftUI
+#if os(macOS)
 import SwiftData
+#endif
 
 @main
 struct ClaudeMeterApp: App {
+    #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-    @State private var viewModel: UsageViewModel
     @StateObject private var updaterController = UpdaterController()
     @AppStorage("selectedMainWindowTab") private var selectedTab: MainWindowTab = .dashboard
     @Environment(\.openWindow) private var openWindow
-
     let modelContainer: ModelContainer
+    #endif
+
+    @State private var viewModel: UsageViewModel
 
     init() {
+        #if os(macOS)
         // Initialize SwiftData container
         let schema = Schema([TokenLogEntry.self, ImportedFile.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
@@ -33,9 +38,13 @@ struct ClaudeMeterApp: App {
         _viewModel = State(initialValue: DependencyContainer.createUsageViewModel(
             modelContext: modelContainer.mainContext
         ))
+        #else
+        _viewModel = State(initialValue: DependencyContainer.createUsageViewModel())
+        #endif
     }
 
     var body: some Scene {
+        #if os(macOS)
         // Main window (opened from menu bar)
         Window("ClaudeMeter", id: Constants.mainWindowID) {
             MainWindowView()
@@ -69,5 +78,11 @@ struct ClaudeMeterApp: App {
                 .environment(viewModel)
         }
         .menuBarExtraStyle(.window)
+        #else
+        WindowGroup {
+            MainTabView()
+                .environment(viewModel)
+        }
+        #endif
     }
 }

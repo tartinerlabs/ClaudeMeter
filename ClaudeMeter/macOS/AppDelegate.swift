@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  ClaudeMeter
-//
-//  Created by Ru Chern Chong on 3/1/26.
-//
-
+#if canImport(AppKit)
 import AppKit
 import UserNotifications
 
@@ -82,3 +76,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
         false
     }
 }
+
+#else
+import Foundation
+
+final class AppDelegate: NSObject {
+    // Non-macOS platforms do not use AppKit. This stub avoids build errors when the file is compiled for other targets.
+}
+#endif
